@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
 import net.minecraft.world.item.Rarity
 import net.minecraft.world.item.SmithingTemplateItem
+import net.minecraft.ChatFormatting
 
 object ModItems {
     private const val MOD_ID = "progressive_smithing"
@@ -38,8 +39,10 @@ object ModItems {
 
     private fun createTemplate(registryName: String, tierName: String): Item =
         SmithingTemplateItem(
-            Component.translatable("item.minecraft.smithing_template.applies_to"),
-            Component.translatable("item.minecraft.smithing_template.ingredients"),
+            Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.applies_to")
+                .withStyle(ChatFormatting.BLUE),
+            Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.ingredients")
+                .withStyle(ChatFormatting.BLUE),
             Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.base_slot_description"),
             Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.additions_slot_description"),
             BASE_SLOT_ICONS,
