@@ -6,5 +6,6 @@ import net.fabricmc.api.ModInitializer
 class ProgressiveSmithingFabric : ModInitializer {
     override fun onInitialize() {
         ProgressiveSmithing.init()
+        ModCreativeTabFabric.init()
     }
 }

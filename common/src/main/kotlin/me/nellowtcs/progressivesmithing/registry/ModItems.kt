@@ -24,8 +24,6 @@ object ModItems {
         ResourceLocation.withDefaultNamespace("container/slot/shovel"),
         ResourceLocation.withDefaultNamespace("container/slot/hoe"),
     )
-    private val INGREDIENT_SLOT_ICON = listOf(ResourceLocation.withDefaultNamespace("container/slot/ingot"))
-
     val ITEMS: DeferredRegister<Item> = DeferredRegister.create("progressive_smithing", Registries.ITEM)
 
     // Template items for each tier transition
@@ -46,9 +44,15 @@ object ModItems {
             Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.base_slot_description"),
             Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.additions_slot_description"),
             BASE_SLOT_ICONS,
-            INGREDIENT_SLOT_ICON,
+            ingredientSlotIcons(tierName),
             Item.Properties()
                 .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, registryName)))
                 .rarity(Rarity.UNCOMMON)
         )
+
+    private fun ingredientSlotIcons(tierName: String): List<ResourceLocation> =
+        when (tierName) {
+            "diamond" -> listOf(ResourceLocation.withDefaultNamespace("container/slot/diamond"))
+            else -> listOf(ResourceLocation.withDefaultNamespace("container/slot/ingot"))
+        }
 }

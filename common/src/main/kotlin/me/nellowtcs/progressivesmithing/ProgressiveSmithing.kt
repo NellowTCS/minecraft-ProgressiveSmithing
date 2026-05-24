@@ -1,7 +1,6 @@
 package me.nellowtcs.progressivesmithing
 
 import me.nellowtcs.progressivesmithing.loot.ModLoot
-import me.nellowtcs.progressivesmithing.registry.ModCreativeTab
 import me.nellowtcs.progressivesmithing.registry.ModItems
 
 object ProgressiveSmithing {
@@ -11,7 +10,6 @@ object ProgressiveSmithing {
     @JvmStatic
     fun init() {
         ModItems.init()
-        ModCreativeTab.init()
         ModLoot.init()
     }
 }
