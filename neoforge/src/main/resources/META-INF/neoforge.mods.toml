@@ -1,15 +1,15 @@
 modLoader = "javafml"
 loaderVersion = "[10,)"
 #issueTrackerURL = ""
-license = "Insert License Here"
+license = "MIT"
 
 [[mods]]
 modId = "progressive_smithing"
 version = "${version}"
 displayName = "Progressive Smithing"
-authors = "Me!"
+authors = "NellowTCS"
 description = '''
-This is an example description! Tell everyone what your mod is about!
+Upgrades the Smithing Table to support tier-based armor upgrades.
 '''
 #logoFile = ""
 
