@@ -42,7 +42,7 @@ class ProgressiveSmithingRecipe(
         // Basic sanity ensure only two slots filled with base & template.
         val base = inv.getStack(0)
         val template = inv.getStack(1)
-        return base.isNotEmpty && template.isNotEmpty && me.nellowtcs.progressivesmithing.Tiers.tierMap.containsKey(base.item)
+        return base.isNotEmpty && template.isNotEmpty && me.nellowtcs.progressivesmithing.UpgradeHandler.canUpgrade(base, template)
     }
 
     override fun getResultTable(): DefaultedList<ItemStack> = DefaultedList.ofSize(1, ItemStack.EMPTY)
