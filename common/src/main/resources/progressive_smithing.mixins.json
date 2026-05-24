@@ -4,9 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [],
-  "mixins": [
-    "me.nellowtcs.progressivesmithing.mixin.SmithingTableMixin"
-  ],
+  "mixins": [],
   "injectors": {
     "defaultRequire": 1
   }

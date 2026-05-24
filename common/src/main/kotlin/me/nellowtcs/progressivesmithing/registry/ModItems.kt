@@ -22,12 +22,12 @@ object ModItems {
 
     private fun createTemplate(tierName: String): Item =
         SmithingTemplateItem(
-            Component.translatable("item.progressive_smithing.upgrade_description.$tierName"),
+            Component.translatable("item.smithing_template.applies_to"),
+            Component.translatable("item.smithing_template.ingredients"),
             Component.translatable("item.progressive_smithing.upgrade_base_slot.$tierName"),
             Component.translatable("item.progressive_smithing.upgrade_additions_slot.$tierName"),
-            Component.translatable("item.progressive_smithing.upgrade_icon_description.$tierName"),
-            Component.translatable("item.progressive_smithing.upgrade_biomes_description.$tierName"),
             listOf(ResourceLocation.withDefaultNamespace("item/empty_slot_helmet")),
-            listOf(ResourceLocation.withDefaultNamespace("item/empty_slot_ingot"))
+            listOf(ResourceLocation.withDefaultNamespace("item/empty_slot_ingot")),
+            Item.Properties()
         )
 }

@@ -1,6 +1,6 @@
 package me.nellowtcs.progressivesmithing
 
-import net.minecraft.item.ItemStack
+import net.minecraft.world.item.ItemStack
 
 /**
  * Handles armor upgrades via the Smithing Table
@@ -19,14 +19,6 @@ object UpgradeHandler {
         if (!canUpgrade(item, template)) return null
 
         val nextItem = Tiers.tierMap[item.item] ?: return null
-        val result = ItemStack(nextItem)
-        copyTagData(item, result)
-        return result
-    }
-
-    private fun copyTagData(src: ItemStack, dst: ItemStack) {
-        // Preserve enchantments, name, lore, trim, durability, etc.
-        dst.tag = src.tag?.copy()
-        dst.damage = src.damage
+        return item.transmuteCopy(nextItem)
     }
 }
