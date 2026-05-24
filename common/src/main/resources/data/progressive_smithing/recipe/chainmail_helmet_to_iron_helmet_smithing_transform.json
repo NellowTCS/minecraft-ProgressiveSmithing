@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progressive_smithing:iron_upgrade_smithing_template",
+  "base": "minecraft:chainmail_helmet",
+  "addition": "minecraft:iron_block",
+  "result": {
+    "id": "minecraft:iron_helmet"
+  }
+}

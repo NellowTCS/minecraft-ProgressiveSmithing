@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progressive_smithing:diamond_upgrade_smithing_template",
+  "base": "minecraft:iron_helmet",
+  "addition": "minecraft:diamond",
+  "result": {
+    "id": "minecraft:diamond_helmet"
+  }
+}

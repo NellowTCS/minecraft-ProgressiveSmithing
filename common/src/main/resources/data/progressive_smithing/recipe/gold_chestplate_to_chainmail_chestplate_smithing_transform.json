@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progressive_smithing:chainmail_upgrade_smithing_template",
+  "base": "minecraft:golden_chestplate",
+  "addition": "minecraft:iron_bars",
+  "result": {
+    "id": "minecraft:chainmail_chestplate"
+  }
+}

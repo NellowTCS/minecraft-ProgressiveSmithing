@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progressive_smithing:copper_upgrade_smithing_template",
+  "base": "minecraft:leather_boots",
+  "addition": "minecraft:copper_ingot",
+  "result": {
+    "id": "minecraft:copper_boots"
+  }
+}

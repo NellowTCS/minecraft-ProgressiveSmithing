@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progressive_smithing:diamond_upgrade_smithing_template",
+  "base": "minecraft:iron_shovel",
+  "addition": "minecraft:diamond",
+  "result": { "id": "minecraft:diamond_shovel" }
+}

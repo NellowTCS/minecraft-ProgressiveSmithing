@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component
 import net.minecraft.resources.ResourceKey
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.world.item.Item
+import net.minecraft.world.item.Rarity
 import net.minecraft.world.item.SmithingTemplateItem
 
 object ModItems {
@@ -16,6 +17,11 @@ object ModItems {
         ResourceLocation.withDefaultNamespace("container/slot/chestplate"),
         ResourceLocation.withDefaultNamespace("container/slot/leggings"),
         ResourceLocation.withDefaultNamespace("container/slot/boots"),
+        ResourceLocation.withDefaultNamespace("container/slot/sword"),
+        ResourceLocation.withDefaultNamespace("container/slot/pickaxe"),
+        ResourceLocation.withDefaultNamespace("container/slot/axe"),
+        ResourceLocation.withDefaultNamespace("container/slot/shovel"),
+        ResourceLocation.withDefaultNamespace("container/slot/hoe"),
     )
     private val INGREDIENT_SLOT_ICON = listOf(ResourceLocation.withDefaultNamespace("container/slot/ingot"))
 
@@ -32,12 +38,14 @@ object ModItems {
 
     private fun createTemplate(registryName: String, tierName: String): Item =
         SmithingTemplateItem(
-            Component.translatable("item.smithing_template.applies_to"),
-            Component.translatable("item.smithing_template.ingredients"),
-            Component.translatable("item.progressive_smithing.upgrade_base_slot.$tierName"),
-            Component.translatable("item.progressive_smithing.upgrade_additions_slot.$tierName"),
+            Component.translatable("item.minecraft.smithing_template.applies_to"),
+            Component.translatable("item.minecraft.smithing_template.ingredients"),
+            Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.base_slot_description"),
+            Component.translatable("item.progressive_smithing.smithing_template.${tierName}_upgrade.additions_slot_description"),
             BASE_SLOT_ICONS,
             INGREDIENT_SLOT_ICON,
-            Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, registryName)))
+            Item.Properties()
+                .setId(ResourceKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, registryName)))
+                .rarity(Rarity.UNCOMMON)
         )
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "progressive_smithing:gold_upgrade_smithing_template",
+  "base": "minecraft:copper_leggings",
+  "addition": "minecraft:gold_ingot",
+  "result": {
+    "id": "minecraft:golden_leggings"
+  }
+}
