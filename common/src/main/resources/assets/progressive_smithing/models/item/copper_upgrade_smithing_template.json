@@ -1,6 +1,6 @@
 {
-  "parent": "item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "progressive_smithing:copper_upgrade_smithing_template"
+    "layer0": "progressive_smithing:item/copper_upgrade_smithing_template"
   }
 }
