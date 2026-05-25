@@ -16,14 +16,14 @@ Upgrades the Smithing Table to support tier-based armor upgrades.
 [[dependencies.progressive_smithing]]
 modId = "neoforge"
 type = "required"
-versionRange = "[21.10,)"
+versionRange = "[21.10,22)"
 ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.progressive_smithing]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.21.10,)"
+versionRange = "[1.21.10,1.22)"
 ordering = "NONE"
 side = "BOTH"
 
