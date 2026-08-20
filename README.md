@@ -1,5 +1,7 @@
 # Progressive Smithing
 
+Find the mod on [Modrinth](https://modrinth.com/mod/progressive-smithing)!
+
 Progressive Smithing adds tiered smithing templates that let armor, tools, and weapons move through a simple upgrade ladder: leather to copper, copper to gold, gold to chainmail, chainmail to iron, and iron to diamond.
 
 The mod is built for Minecraft 1.21.10 with Architectury, so the same codebase can target Fabric and NeoForge.
